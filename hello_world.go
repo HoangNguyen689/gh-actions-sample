@@ -2,6 +2,6 @@ package ghactionssample
 
 import "fmt"
 
-func main() {
+func printHello() {
 	fmt.Println("Hello")
 }
