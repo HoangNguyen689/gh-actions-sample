@@ -1,0 +1,19 @@
+name: server
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  go-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+          cache: true
+          cache-dependency-path: go.sum
+      - run: go build -o ../.artifacts ./hello_world.go
