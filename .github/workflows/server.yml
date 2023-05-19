@@ -28,9 +28,9 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-go@v4
         with:
-          go-version-file: backend/go.mod
+          go-version-file: go.mod
           cache: true
-          cache-dependency-path: backend/go.sum
+          cache-dependency-path: go.sum
       - run: go test .
   go-lint:
     runs-on: ubuntu-latest
@@ -44,8 +44,8 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-go@v4
         with:
-          go-version-file: backend/go.mod
+          go-version-file: go.mod
           cache: true
-          cache-dependency-path: backend/go.sum
+          cache-dependency-path: go.sum
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v3
