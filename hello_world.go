@@ -1,7 +1,7 @@
-package ghactionssample
+package main
 
 import "fmt"
 
-func printHello() {
+func main() {
 	fmt.Println("Hello")
 }
