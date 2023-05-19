@@ -16,4 +16,4 @@ jobs:
           go-version-file: go.mod
           cache: true
           cache-dependency-path: go.sum
-      - run: go build -o ../.artifacts ./hello_world.go
+      - run: go build -o ./.artifacts ./hello_world.go
